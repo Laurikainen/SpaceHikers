@@ -30,6 +30,26 @@ window.onload = function () {
 		'Hiking trails': layer3		
 	})
 	control.addTo(mymap);
+
+	/*Legend specific*/
+	var legend = L.control({ position: "bottomleft" });
+
+	legend.onAdd = function(mymap) {
+	  var div = L.DomUtil.create("div", "legend");
+	  div.innerHTML += "<h4>Legend</h4>";
+	  div.innerHTML += '<i style="background: #477AC2"></i><span>Water</span><br>';
+	  div.innerHTML += '<i style="background: #448D40"></i><span>Forest</span><br>';
+	  div.innerHTML += '<i style="background: #E6E696"></i><span>Land</span><br>';
+	  div.innerHTML += '<i style="background: #E8E6E0"></i><span>Residential</span><br>';
+	  div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
+	  div.innerHTML += '<i style="background: #47FAC2"></i><span>Grænse</span><br>';
+	  
+	  
+
+	  return div;
+	};
+
+	legend.addTo(mymap);
 };
 
 // Recommended (explicit source)
