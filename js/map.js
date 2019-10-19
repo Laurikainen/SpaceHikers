@@ -24,10 +24,45 @@ window.onload = function () {
 	transparent: true
 	}).addTo(mymap);
 	
+	var layer4 = L.tileLayer.wms('https://aoraki.domenis.ut.ee/geoserver/spatialdatastudio2019/wms?', {
+	layers: ['spatialdatastudio2019:historic_p%C3%A4rnumaa', 'spatialdatastudio2019:historic_tartumaa'],
+	format: 'image/png',
+	transparent: true
+	}).addTo(mymap);
+	
+	var layer6 = L.tileLayer.wms('https://aoraki.domenis.ut.ee/geoserver/spatialdatastudio2019/wms?', {
+	layers: ['spatialdatastudio2019:mush_soils_p%C3%A4rnumaa', 'spatialdatastudio2019:mush_soils_tartumaa'],
+	format: 'image/png',
+	transparent: true
+	}).addTo(mymap);
+	
+	var layer8 = L.tileLayer.wms('https://aoraki.domenis.ut.ee/geoserver/spatialdatastudio2019/wms?', {
+	layers: ['spatialdatastudio2019:p%C3%A4rnu_private', 'spatialdatastudio2019:tartu_private'],
+	format: 'image/png',
+	transparent: true
+	}).addTo(mymap);
+	
+	var layer9 = L.tileLayer.wms('https://aoraki.domenis.ut.ee/geoserver/spatialdatastudio2019/wms?', {
+	layers: 'spatialdatastudio2019:protected_areas',
+	format: 'image/png',
+	transparent: true
+	}).addTo(mymap);
+	
+	var layer10 = L.tileLayer.wms('https://aoraki.domenis.ut.ee/geoserver/spatialdatastudio2019/wms?', {
+	layers: ['spatialdatastudio2019:srings_p%C3%A4rnumaa','spatialdatastudio2019:srrings_tartumaa'],
+	format: 'image/png',
+	transparent: true
+	}).addTo(mymap);
+	
 	var control = L.control.layers({}, {
 		'Roads': layer1,
 		'Camping sites': layer2,
-		'Hiking trails': layer3		
+		'Hiking trails': layer3,
+		'Historic sites': layer4,
+		'Mushroom soils': layer6,
+		'Private land': layer8,
+		'Protected areas': layer9,
+		'Springs': layer10,
 	})
 	control.addTo(mymap);
 
@@ -37,12 +72,14 @@ window.onload = function () {
 	legend.onAdd = function(mymap) {
 	  var div = L.DomUtil.create("div", "legend");
 	  div.innerHTML += "<h4>Legend</h4>";
-	  div.innerHTML += '<i style="background: #477AC2"></i><span>Water</span><br>';
-	  div.innerHTML += '<i style="background: #448D40"></i><span>Forest</span><br>';
-	  div.innerHTML += '<i style="background: #E6E696"></i><span>Land</span><br>';
-	  div.innerHTML += '<i style="background: #E8E6E0"></i><span>Residential</span><br>';
-	  div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
-	  div.innerHTML += '<i style="background: #47FAC2"></i><span>Grænse</span><br>';
+	  div.innerHTML += '<i style="background: #477AC2"></i><span>Roads</span><br>';
+	  div.innerHTML += '<i style="background: #448D40"></i><span>Camping sites</span><br>';
+	  div.innerHTML += '<i style="background: #E6E696"></i><span>Hiking trails</span><br>';
+	  div.innerHTML += '<i style="background: #E8E6E0"></i><span>Historic sites</span><br>';
+	  div.innerHTML += '<i style="background: #FFFFFF"></i><span>Mushroom soils</span><br>';
+	  div.innerHTML += '<i style="background: #47FAC2"></i><span>Private land</span><br>';
+	  div.innerHTML += '<i style="background: #FFF0FF"></i><span>Protected areas</span><br>';
+	  div.innerHTML += '<i style="background: #47FA02"></i><span>Springs</span><br>';
 	  
 	  
 
@@ -51,14 +88,3 @@ window.onload = function () {
 
 	legend.addTo(mymap);
 };
-
-// Recommended (explicit source)
-//var options = {'transparent': true};
-//var source = L.WMS.source("http://example.com/mapserv", options);
-//var layer1 = source.getLayer('layer1');
-//var layer2 = source.getLayer('layer2');
-//var control = L.control.layers({}, {
-//    'Layer 1': layer1,
-//    'Layer 2': layer2
-//})
-//control.addTo(map);
