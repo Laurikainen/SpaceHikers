@@ -1,5 +1,5 @@
 window.onload = function () {
-	var mymap = L.map('mapid').setView([58.373, 26.716], 9);
+	var mymap = L.map('mapid').setView([58.373, 26.716], 11);
 	var mark = L.marker([58.373, 26.716], {title: 'Vanemuise 46, Tartu'}).addTo(mymap);
 	
 	var base = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
