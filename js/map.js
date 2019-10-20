@@ -25,19 +25,19 @@ window.onload = function () {
 	}).addTo(mymap);
 	
 	var layer4 = L.tileLayer.wms('https://aoraki.domenis.ut.ee/geoserver/spatialdatastudio2019/wms?', {
-	layers: ['spatialdatastudio2019:historic_p%C3%A4rnumaa', 'spatialdatastudio2019:historic_tartumaa'],
+	layers: ['spatialdatastudio2019:historic_parnumaa', 'spatialdatastudio2019:historic_tartumaa'],
 	format: 'image/png',
 	transparent: true
 	}).addTo(mymap);
 	
 	var layer6 = L.tileLayer.wms('https://aoraki.domenis.ut.ee/geoserver/spatialdatastudio2019/wms?', {
-	layers: ['spatialdatastudio2019:mush_soils_p%C3%A4rnumaa', 'spatialdatastudio2019:mush_soils_tartumaa'],
+	layers: ['spatialdatastudio2019:mush_soils_parnumaa', 'spatialdatastudio2019:mush_soils_tartumaa'],
 	format: 'image/png',
 	transparent: true
 	}).addTo(mymap);
 	
 	var layer8 = L.tileLayer.wms('https://aoraki.domenis.ut.ee/geoserver/spatialdatastudio2019/wms?', {
-	layers: ['spatialdatastudio2019:p%C3%A4rnu_private', 'spatialdatastudio2019:tartu_private'],
+	layers: ['spatialdatastudio2019:parnu_private', 'spatialdatastudio2019:tartu_private'],
 	format: 'image/png',
 	transparent: true
 	}).addTo(mymap);
@@ -49,7 +49,7 @@ window.onload = function () {
 	}).addTo(mymap);
 	
 	var layer10 = L.tileLayer.wms('https://aoraki.domenis.ut.ee/geoserver/spatialdatastudio2019/wms?', {
-	layers: ['spatialdatastudio2019:srings_p%C3%A4rnumaa','spatialdatastudio2019:srrings_tartumaa'],
+	layers: ['spatialdatastudio2019:springs_parnumaa','spatialdatastudio2019:springs_tartumaa'],
 	format: 'image/png',
 	transparent: true
 	}).addTo(mymap);
