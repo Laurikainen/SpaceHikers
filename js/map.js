@@ -58,7 +58,7 @@ window.onload = function () {
 		'Roads': layer1,
 		'Camping sites': layer2,
 		'Hiking trails': layer3,
-		'Historic sites': layer4,
+		'Historical points': layer4,
 		'Mushroom soils': layer6,
 		'Private land': layer8,
 		'Protected areas': layer9,
@@ -72,13 +72,13 @@ window.onload = function () {
 	legend.onAdd = function(mymap) {
 	  var div = L.DomUtil.create("div", "legend");
 	  div.innerHTML += "<h4>Legend</h4>";
-	  div.innerHTML += '<i style="background: #477AC2"></i><span>Roads</span><br>';
-	  div.innerHTML += '<i style="background: #448D40"></i><span>Camping sites</span><br>';
-	  div.innerHTML += '<i style="background: #E6E696"></i><span>Hiking trails</span><br>';
-	  div.innerHTML += '<i style="background: #E8E6E0"></i><span>Historic sites</span><br>';
-	  div.innerHTML += '<i style="background: #FFFFFF"></i><span>Mushroom soils</span><br>';
-	  div.innerHTML += '<i style="background: #47FAC2"></i><span>Private land</span><br>';
-	  div.innerHTML += '<i style="background: #FFF0FF"></i><span>Protected areas</span><br>';
+	  div.innerHTML += '<i style="background: #000001"></i><span>Roads</span><br>';
+	  div.innerHTML += '<i style="background: #9b0000"></i><span>Camping sites</span><br>';
+	  div.innerHTML += '<i style="background: #a45200"></i><span>Hiking trails</span><br>';
+	  div.innerHTML += '<i style="background: #000000"></i><span>Historical points</span><br>';
+	  div.innerHTML += '<i style="background: #ebb705"></i><span>Mushroom soils</span><br>';
+	  div.innerHTML += '<i style="background: #424242"></i><span>Private land</span><br>';
+	  div.innerHTML += '<i style="background: #55af18"></i><span>Protected areas</span><br>';
 	  div.innerHTML += '<i style="background: #47FA02"></i><span>Springs</span><br>';
 	  
 	  
